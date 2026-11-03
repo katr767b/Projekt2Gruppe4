@@ -1,0 +1,199 @@
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 4%;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    color: #777;
+}
+
+
+/* MAIN */
+
+main {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 30px;
+}
+
+h2, h3, h4 {
+    margin-top: 0;
+}
+
+
+/* LOCATION SEARCH */
+
+#location {
+    margin: 30px 0;
+}
+
+#locationForm {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#locationForm label {
+    display: none;
+}
+
+input {
+    flex: 1;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+button {
+    padding: 13px 20px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #333;
+    color: white;
+}
+
+#selectedCity {
+    color: #777;
+    margin-top: 15px;
+}
+
+
+/* DASHBOARD LAYOUT */
+
+#dashboard {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+section {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 25px;
+}
+
+
+/* CURRENT WEATHER */
+
+#temperature {
+    font-size: 64px;
+    margin: 20px 0 5px;
+    font-weight: normal;
+}
+
+#weatherDescription {
+    font-size: 18px;
+}
+
+#feelsLike,
+#wind,
+#rain {
+    color: #666;
+}
+
+
+/* CLOTHING ADVICE */
+
+#adviceType {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 12px;
+}
+
+#clothingList {
+    list-style: none;
+    padding: 0;
+}
+
+#clothingList li {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#clothingList h4 {
+    margin-bottom: 5px;
+}
+
+#clothingList p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* FORECAST */
+
+#forecastList {
+    list-style: none;
+    padding: 0;
+}
+
+#forecastList li {
+    padding: 18px 5px;
+    border-bottom: 1px solid #eee;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    main {
+        padding: 0 15px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    #dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    #locationForm {
+        flex-wrap: wrap;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+}

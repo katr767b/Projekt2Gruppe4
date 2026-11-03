@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wearther - Vejr og påklædning</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Wearther</h1>
+        <p>Gæst · Log ind / Opret profil</p>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <h2>Vejr og påklædning</h2>
+        <p>Søg efter en by og få vejret samt generelle påklædningsråd.</p>
+
+
+        <!-- LOCATION SEARCH -->
+        <section id="location">
+
+            <form id="locationForm">
+
+                <label for="cityInput">Søg efter by</label>
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Indtast bynavn..."
+                >
+
+                <button type="submit">Søg efter by</button>
+
+                <button type="button" id="gpsButton">
+                    Brug min position
+                </button>
+
+            </form>
+
+            <p id="selectedCity">København · Valgt by</p>
+
+        </section>
+
+
+        <!-- DASHBOARD -->
+        <div id="dashboard">
+
+
+            <!-- CURRENT WEATHER -->
+            <section id="currentWeather">
+
+                <h3>Vejret lige nu</h3>
+
+                <p id="weatherLocation">København, Danmark</p>
+
+                <h2 id="temperature">12°C</h2>
+
+                <p id="weatherDescription">Let regn</p>
+
+                <p id="feelsLike">Føles som 9°C</p>
+
+                <p id="wind">Vind: 6 m/s</p>
+
+                <p id="rain">Risiko for regn: 70%</p>
+
+            </section>
+
+<p class="attribution">
+    Vejrdata: <a href="https://open-meteo.com/">Open-Meteo</a> |
+    Steddata: <a href="https://www.geonames.org/">GeoNames</a>
+</p>
+
+            <!-- CLOTHING RECOMMENDATIONS -->
+            <section id="clothingAdvice">
+
+                <h3>Anbefalet påklædning</h3>
+
+                <p id="adviceType">GENERELLE RÅD · GÆST</p>
+
+                <p>Baseret på vejret i den valgte by.</p>
+
+                <ul id="clothingList">
+
+                    <li>
+                        <h4>Vand- og vindtæt jakke</h4>
+                        <p>Beskyttelse mod regn og blæst.</p>
+                    </li>
+
+                    <li>
+                        <h4>Trøje som mellemlag</h4>
+                        <p>Et lag under jakken mod den kølige luft.</p>
+                    </li>
+
+                    <li>
+                        <h4>Lange bukser</h4>
+                        <p>Dæk benene i det kølige vejr.</p>
+                    </li>
+
+                    <li>
+                        <h4>Vandtætte sko</h4>
+                        <p>Beskyttelse mod våde underlag.</p>
+                    </li>
+
+                </ul>
+
+                <p>Vil du have personlige tøjråd?</p>
+
+                <button type="button">
+                    Log ind / Opret profil
+                </button>
+
+            </section>
+
+
+            <!-- FIVE DAY FORECAST -->
+            <section id="forecast">
+
+                <h3>5-dages vejrudsigt</h3>
+
+                <ul id="forecastList">
+
+                    <li>I dag · Let regn · 8° / 13°</li>
+                    <li>Onsdag · Overskyet · 7° / 11°</li>
+                    <li>Torsdag · Let skyet · 6° / 10°</li>
+                    <li>Fredag · Regn · 8° / 12°</li>
+                    <li>Lørdag · Solrigt · 5° / 9°</li>
+
+                </ul>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- STATUS FOR JAVASCRIPT -->
+    <p id="status" hidden></p>
+
+</body>
+</html>
