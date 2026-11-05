@@ -131,6 +131,30 @@ console.log("Weather data:", data);
     const rainProbability =
         data.hourly.precipitation_probability[nearestIndex];
 
+
+        // GENERATE CLOTHING RECOMMENDATIONS
+
+const clothingAdvice = generateClothingAdvice(
+    current.temperature_2m,
+    rainProbability,
+    current.wind_speed_10m
+);
+
+// UPDATE CLOTHING RECOMMENDATIONS
+
+const clothingList = document.querySelector("#clothingList");
+
+clothingList.innerHTML = clothingAdvice.map(function(item) {
+
+    return `
+        <li>
+            <h4>${item.name}</h4>
+            <p>${item.description}</p>
+        </li>
+    `;
+
+}).join("");
+
     document.querySelector("#rain").textContent =
         "Risiko for regn: " +
         (rainProbability ?? "Ukendt") + "%";
